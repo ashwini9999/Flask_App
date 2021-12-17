@@ -7,8 +7,7 @@ from sqlalchemy.exc import IntegrityError
 
 
 app = Flask(__name__)
-app.secret_key='abc'
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:ashwini@localhost/flask-table'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://username:password@localhost/flask-table'
 db=SQLAlchemy(app)
 
 class User(db.Model):
